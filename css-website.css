@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+:root {
+    --brand:#fe4c28;
+    --w:#fff;
+}
+.con{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 8px;
+}
+.top{
+    background: var(--brand);
+    color: var(--w);
+    line-height: 50px;
+}
+.logo{
+    width: 100%;
+}
+.grid{
+    gap:20px;
+}
+nav ul{
+    display: none;
+}
+nav span{font-size: 30px;}
+.w-100{
+    width: 100%;
+}
+.menu-toggle{
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    margin-right: 15px;
+    display: none;
+}
+.nav-menu{
+    display: flex;
+    gap: 20px;
+}
+.banner{
+    position: relative; height: 100%; width: 100%;
+}
+.banner::before{content:''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: #00000077;}
+.about{
+    padding: 30px 0;
+}
+.grid1{
+    padding: 20px;
+}
+.decor{
+    background: linear-gradient(rgba(255, 166, 0, 0.375),rgba(255, 166, 0, 0.384)),url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=1000&q=60);
+    padding: 150px 0;
+    background-position: bottom;
+}
+.gallery{
+    padding: 30px 0;
+}
+.gallery img{
+    width: 100%;
+}
+.gallery h2{
+    text-align: center;
+    padding: 25px;
+}
+.events h2{
+    text-align: center;
+}
+.eventimage{
+    width: 100%;
+}
+.myslideshow{
+    display: none;
+}
+.myslideshow2{
+    display: none;
+}
+footer{
+    background: linear-gradient(rgba(255, 166, 0, 0.392),rgba(255, 166, 0, 0.6)),url(https://c6k7e2u7.rocketcdn.me/wp-content/uploads/2018/06/Why-Online-Comparison-of-Different-IT-companies-in-Miami-is-Crucial.jpg);
+    padding: 40px;
+    background-position: center;
+    color: var(--w);
+}
+footer h2 span{
+    color: orange;
+}
+@media (min-width:480px){
+    .grid{
+        display: grid; grid-template-columns: auto auto; align-items: center;justify-content: space-between;}
+    .flex{
+        display: flex; 
+        gap: 20px;}
+    .social{
+        text-align: right;
+    }
+    nav span{display: none;}
+    nav ul{display: flex; gap: 20px;}
+    nav a{color: black; font-weight: bold;}
+    .grid1{
+        display: grid; grid-template-columns:repeat(2,1fr); padding: 20px; max-width: 1200px; margin: auto; gap: 20px;
+    }
+    .grid1 h3{
+        font-size: 30px; padding-bottom: 20px;
+    }
+    .grid2{
+        display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+    }
+}
+@media(max-width:480px){
+    .nav-menu{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .nav-menu.show{
+        display: flex;
+    }
+}
